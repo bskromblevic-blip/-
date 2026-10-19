@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMIÈRE SKIN — Уходовая косметика (ЛР №21)</title>
+    <!-- Подключаем таблицу стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка с навигацией -->
+    <header>
+        <div class="logo" onclick="navigate('home')">LUMIÈRE <span>SKIN</span></div>
+        <nav>
+            <button class="nav-btn active" data-target="home" onclick="navigate('home')">Главная</button>
+            <button class="nav-btn" data-target="catalog" onclick="navigate('catalog')">Каталог</button>
+            <button class="nav-btn" data-target="cart" onclick="navigate('cart')">Корзина (2)</button>
+            <button class="nav-btn" data-target="profile" onclick="navigate('profile')">Профиль</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ЭКРАН 1: ГЛАВНАЯ -->
+        <section id="home" class="screen active">
+            <div class="hero">
+                <h2>Научный подход к уходу за кожей</h2>
+                <p>Функциональный прототип интернет-магазина уходовой косметики (Лабораторная работа №21). Чистые составы, доказанная эффективность активов и продуманная навигация.</p>
+                <button class="btn-primary" onclick="navigate('catalog')">Подобрать уход</button>
+            </div>
+
+            <h1>Основные этапы ухода</h1>
+            <div class="grid">
+                <div class="card">
+                    <span class="tag">Этап 01</span>
+                    <h3>Очищение и тонизирование</h3>
+                    <p>Мягкие гели с нейтральным pH, гидрофильные масла и кислотные тоники.</p>
+                    <button class="btn-primary" onclick="navigate('catalog')">Смотреть средства</button>
+                </div>
+                <div class="card">
+                    <span class="tag">Этап 02</span>
+                    <h3>Сыворотки и активы</h3>
+                    <p>Высококонцентрированный ниацинамид, витамин C, ретинол и пептидные комплексы.</p>
+                    <button class="btn-primary" onclick="navigate('catalog')">Смотреть средства</button>
+                </div>
+                <div class="card">
+                    <span class="tag">Этап 03</span>
+                    <h3>Увлажнение и SPF-защита</h3>
+                    <p>Ламеллярные кремы с церамидами и невесомые солнцезащитные флюиды SPF 50+.</p>
+                    <button class="btn-primary" onclick="navigate('catalog')">Смотреть средства</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ЭКРАН 2: КАТАЛОГ -->
+        <section id="catalog" class="screen">
+            <h1>Каталог уходовой косметики</h1>
+            
+            <div class="filters">
+                <input type="text" class="input-control" placeholder="Поиск по компоненту или названию...">
+                <select class="input-control">
+                    <option>Все категории</option>
+                    <option>Очищение</option>
+                    <option>Сыворотки</option>
+                    <option>Кремы</option>
+                    <option>SPF-защита</option>
+                </select>
+                <select class="input-control">
+                    <option>Любой тип кожи</option>
+                    <option>Для сухой и обезвоженной</option>
+                    <option>Для жирной и проблемной</option>
+                    <option>Для чувствительной</option>
+                </select>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-img">[Макет фото: Сыворотка 30 мл]</div>
+                    <span class="tag">Себорегуляция</span>
+                    <h3>Сыворотка Niacinamide 10% + Zinc 1%</h3>
+                    <p>Сужает поры, выравнивает микрорельеф и снижает жирный блеск.</p>
+                    <div class="card-footer">
+                        <span class="price">45 BYN</span>
+                        <button class="btn-primary" onclick="navigate('cart')">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">[Макет фото: Гель 200 мл]</div>
+                    <span class="tag">Базовое очищение</span>
+                    <h3>Увлажняющий гель CeraCleanse pH 5.5</h3>
+                    <p>Деликатно очищает без чувства стянутости, содержит 3 вида церамидов.</p>
+                    <div class="card-footer">
+                        <span class="price">38 BYN</span>
+                        <button class="btn-primary" onclick="navigate('cart')">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">[Макет фото: Крем 50 мл]</div>
+                    <span class="tag">Восстановление барьера</span>
+                    <h3>Крем-комфорт с центеллой и пантенолом</h3>
+                    <p>Мгновенно успокаивает раздражения и глубоко питает кожу.</p>
+                    <div class="card-footer">
+                        <span class="price">62 BYN</span>
+                        <button class="btn-primary" onclick="navigate('cart')">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">[Макет фото: Флюид 50 мл]</div>
+                    <span class="tag">Защита от фотостарения</span>
+                    <h3>Солнцезащитный флюид Invisible SPF 50+</h3>
+                    <p>На стабильных химических фильтрах нового поколения без белых следов.</p>
+                    <div class="card-footer">
+                        <span class="price">55 BYN</span>
+                        <button class="btn-primary" onclick="navigate('cart')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ЭКРАН 3: КОРЗИНА -->
+        <section id="cart" class="screen">
+            <h1>Корзина покупок</h1>
+            <div class="panel">
+                <div class="cart-row">
+                    <div>
+                        <h3>Сыворотка Niacinamide 10% + Zinc 1%</h3>
+                        <p class="text-muted">Объем: 30 мл • Количество: 1 шт.</p>
+                    </div>
+                    <span class="price">45 BYN</span>
+                </div>
+                <div class="cart-row">
+                    <div>
+                        <h3>Крем-комфорт с центеллой и пантенолом</h3>
+                        <p class="text-muted">Объем: 50 мл • Количество: 1 шт.</p>
+                    </div>
+                    <span class="price">62 BYN</span>
+                </div>
+            </div>
+
+            <div class="panel cart-summary">
+                <div>
+                    <span class="text-muted">Итого к оплате:</span>
+                    <div class="price total-price">107 BYN</div>
+                </div>
+                <button class="btn-primary" onclick="checkoutDemo()">Оформить заказ</button>
+            </div>
+        </section>
+
+        <!-- ЭКРАН 4: ПРОФИЛЬ -->
+        <section id="profile" class="screen">
+            <h1>Личный кабинет</h1>
+            <div class="panel">
+                <h3>Профиль покупателя</h3>
+                <p class="text-muted mt-8">Выбранный тип кожи: <strong>Комбинированная / Чувствительная</strong></p>
+                <p class="text-muted mt-4">Бонусный баланс: <strong>12 BYN</strong></p>
+            </div>
+
+            <div class="panel">
+                <h3>История заказов</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№ Заказа</th>
+                            <th>Дата</th>
+                            <th>Состав заказа</th>
+                            <th>Сумма</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#SKIN-204</td>
+                            <td>18.10.2026</td>
+                            <td>Сыворотка Niacinamide, Крем с центеллой</td>
+                            <td>107 BYN</td>
+                            <td><span class="badge">Собран на складе</span></td>
+                        </tr>
+                        <tr>
+                            <td>#SKIN-189</td>
+                            <td>04.10.2026</td>
+                            <td>Гель для умывания CeraCleanse</td>
+                            <td>38 BYN</td>
+                            <td><span class="badge">Получен</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Лабораторная работа №21 — Каркас интерфейса интернет-магазина уходовой косметики «LUMIÈRE SKIN»
+    </footer>
+
+    <!-- Подключаем скрипт навигации -->
+    <script src="script.js"></script>
+</body>
+</html>
